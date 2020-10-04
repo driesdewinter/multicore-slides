@@ -1,0 +1,60 @@
+.reveal {
+  background-image: url("wallpaper.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.reveal .slides {
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 9.6rem 3.345rem;
+}
+
+.greyed-out {
+    color: #444;
+}
+
+.line-default {
+    fill: none;
+    stroke: #fff;
+}
+
+.fill-red {
+    fill: #f44;
+}
+
+.fill-grey {
+    fill: #444;
+}
+
+.line-grey {
+    stroke: #444;
+    fill: none;
+}
+
+.line-red {
+    stroke: #f44;
+    fill: none;
+}
+
+.marker-default {
+    fill: none;
+    stroke: #fff;
+}
+
+.fill-default {
+    fill: #fff;
+}
+
+.shape {
+	background-color: #fff;
+}
+
+.box {
+    fill: #333;
+    opacity: 0.5;
+    filter: url(#dropshadow);
+}
+
+.tblcols col:nth-child(even) { background: #3338; }

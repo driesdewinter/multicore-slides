@@ -1011,7 +1011,7 @@ echo performance | sudo tee /sys/devices/system/cpu/cpufreq/*/scaling_governor
 ```sh
 make impl2
 ctest -V -R impl2
-./impl2 < ../jsonxml/test-file.json
+./impl2 < ../test-file.json
 time ./impl2 < ./large-file.json > large-file.xml
 ```
 Source code: see `impl2.cpp` 
@@ -3930,6 +3930,15 @@ Back to `fifo.h`
 Fix it with atomics and/or memory barriers!
 
 Experiment with different memory order variants.
+
+
+## Verify DRF
+Enable gcc's thread sanitizer
+```sh
+cmake -DCMAKE_CXX_FLAGS="-fsanitize=thread" ..
+make impl3
+./impl3 <../test-file.json >/dev/null
+```
 
 
 <!-- .slide: data-auto-animate --> 

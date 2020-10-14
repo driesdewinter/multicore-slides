@@ -178,7 +178,7 @@ Author: Dries De Winter
 <!-- .slide: data-auto-animate -->
 ## What is optimization?
 Trade-off between various _technical_ and _economic_ objectives:
-- Improve exectuion speed of program
+- Improve execution speed of program
 - Reduce engineering effort
 - Improve reliability
 - Reduce hardware cost
@@ -188,7 +188,7 @@ Trade-off between various _technical_ and _economic_ objectives:
 <!-- .slide: data-auto-animate -->
 ## What is optimization?
 Trade-off between various _technical_ and _economic_ objectives:
-- Improve exectuion speed of program
+- Improve execution speed of program
 - Reduce engineering effort
 - Improve reliability
 - Reduce hardware cost
@@ -200,7 +200,7 @@ An _optimized program_ is never _optimal_, rather just _good enough_
 <!-- .slide: data-auto-animate -->
 ## What is optimization?
 Trade-off between various _technical_ and _economic_ objectives:
-- Improve exectuion speed of program
+- Improve execution speed of program
 - Reduce engineering effort
 - Improve reliability
 - Reduce hardware cost
@@ -987,7 +987,6 @@ It took 7117841255ns.
 perf record --call-graph=lbr ./impl1 < ./xlarge-file.json > xlarge-file.xml
 perf report
 ```
-![Image](perf.png)
 
 
 ## Profiling using google-perftools
@@ -995,7 +994,6 @@ perf report
 CPUPROFILE=gperf.data LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libprofiler.so.0.4.18 ./impl1 < ./xlarge-file.json > xlarge-file.xml
 google-pprof --gv impl1 gperf.data
 ```
-![Image](google-pprof.png)
 
 
 ## Performance sanity checks
@@ -3415,6 +3413,7 @@ void unlock() {
     value = 0;
     futex(&value, FUTEX_WAKE, 1, 0, 0, 0);
 }
+```
 </td>
 </tr></table>
 
@@ -3475,6 +3474,7 @@ extern std::atomic<int> x;
 // compiles to
 // - increment x atomically in memory 
 ++x;
+```
 </td>
 </tr></table>
 
@@ -3571,6 +3571,7 @@ t1.join(); t2.join();
 
 ## `std::atomic` - `memory_order_consume`
 ![](memory_order_consume.png)
+
 release/consume ordering is like release/acquire except that the read barrier only holds for **dependent** loads.
 
 
